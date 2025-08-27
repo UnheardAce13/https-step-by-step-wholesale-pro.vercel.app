@@ -2,7 +2,8 @@ import { NextResponse } from "next/server"
 import { createAdminClient } from "@/lib/supabase"
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Only initialize Resend if API key is available
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 const FROM_EMAIL = process.env.FROM_EMAIL || "onboarding@resend.dev"
 
 export async function GET(req: Request) {
@@ -57,7 +58,7 @@ export async function POST(req: Request) {
     }
 
     // Send email notification if recipient_email is provided and Resend API key is set
-    if (recipient_email && process.env.RESEND_API_KEY && process.env.FROM_EMAIL) {
+    if (recipient_email && resend && process.env.FROM_EMAIL) {
       try {
         await resend.emails.send({
           from: process.env.FROM_EMAIL,
