@@ -31,10 +31,10 @@ import { useState } from "react"
 
 export default function HomePage() {
   const [email, setEmail] = useState("")
-  const [adminClicks, setAdminClicks] = useState(0)
+  const [adminClicks, setAdminClicks] = useState<number>(0)
 
   const handleAdminAccess = () => {
-    setAdminClicks(prev => prev + 1)
+    setAdminClicks((prev: number) => prev + 1)
     if (adminClicks >= 4) {
       window.location.href = '/admin/login'
     }
@@ -339,7 +339,7 @@ export default function HomePage() {
                 type="email"
                 placeholder="Enter your email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                 className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-gray-400 min-h-[44px] text-sm sm:text-base"
               />
               <Button className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 min-h-[44px] text-sm sm:text-base px-6 sm:px-8">
