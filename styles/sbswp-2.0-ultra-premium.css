@@ -1,0 +1,511 @@
+/**
+ * S.B.S.W.P 2.0 - ULTRA PREMIUM BRAND SYSTEM
+ * The most advanced real estate platform design system ever created
+ * Makes BiggerPockets, FortuneBuilders, and Roofstock look prehistoric
+ */
+
+/* ==================================================
+   ULTRA-PREMIUM VARIABLES SYSTEM
+   ================================================== */
+
+:root {
+  /* COMPETITION-CRUSHING COLOR PALETTE */
+  --sbswp-primary-quantum: #0066ff;
+  --sbswp-primary-quantum-dark: #0052d9;
+  --sbswp-primary-quantum-light: #1a73e8;
+  
+  --sbswp-secondary-emerald: #00d084;
+  --sbswp-secondary-emerald-dark: #00b26e;
+  --sbswp-secondary-emerald-light: #00e693;
+  
+  --sbswp-accent-gold: #ff9500;
+  --sbswp-accent-gold-dark: #e6850e;
+  --sbswp-accent-gold-light: #ffab1d;
+  
+  --sbswp-accent-purple: #7c3aed;
+  --sbswp-accent-purple-dark: #6d28d9;
+  --sbswp-accent-purple-light: #8b5cf6;
+  
+  /* ADVANCED NEURAL GRADIENTS */
+  --sbswp-neural-gradient-primary: linear-gradient(135deg, 
+    var(--sbswp-primary-quantum) 0%, 
+    var(--sbswp-secondary-emerald) 50%, 
+    var(--sbswp-accent-purple) 100%);
+  
+  --sbswp-neural-gradient-dark: linear-gradient(135deg, 
+    #0a0a0a 0%, 
+    #1a1a2e 25%, 
+    #16213e 50%, 
+    #0f3460 100%);
+  
+  --sbswp-neural-gradient-glass: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    rgba(255, 255, 255, 0.02) 100%);
+  
+  /* QUANTUM MORPHISM EFFECTS */
+  --sbswp-quantum-blur: blur(40px);
+  --sbswp-quantum-backdrop: saturate(180%) blur(20px);
+  --sbswp-quantum-glow: 0 0 50px rgba(0, 102, 255, 0.4);
+  
+  /* TYPOGRAPHY PERFECTION */
+  --sbswp-font-display: 'SF Pro Display', 'Inter', system-ui, sans-serif;
+  --sbswp-font-text: 'SF Pro Text', 'Inter', system-ui, sans-serif;
+  --sbswp-font-mono: 'SF Mono', 'JetBrains Mono', monospace;
+  
+  /* NEURAL ANIMATION TIMINGS */
+  --sbswp-speed-instant: 0.1s;
+  --sbswp-speed-fast: 0.2s;
+  --sbswp-speed-normal: 0.3s;
+  --sbswp-speed-slow: 0.6s;
+  --sbswp-speed-ultra: 1.2s;
+  
+  /* QUANTUM EASING CURVES */
+  --sbswp-ease-quantum: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --sbswp-ease-neural: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --sbswp-ease-ultra: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* ==================================================
+   QUANTUM MORPHISM CORE COMPONENTS
+   ================================================== */
+
+.sbswp-quantum-card {
+  background: var(--sbswp-neural-gradient-glass);
+  backdrop-filter: var(--sbswp-quantum-backdrop);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    var(--sbswp-quantum-glow);
+  transition: all var(--sbswp-speed-normal) var(--sbswp-ease-quantum);
+  position: relative;
+  overflow: hidden;
+}
+
+.sbswp-quantum-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.1), 
+    transparent);
+  transition: all var(--sbswp-speed-ultra) var(--sbswp-ease-neural);
+}
+
+.sbswp-quantum-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 40px 80px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 0 100px rgba(0, 102, 255, 0.3);
+}
+
+.sbswp-quantum-card:hover::before {
+  left: 100%;
+}
+
+/* NEURAL BUTTONS - COMPETITION DESTRUCTION */
+.sbswp-neural-button {
+  background: var(--sbswp-neural-gradient-primary);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-family: var(--sbswp-font-display);
+  font-weight: 600;
+  padding: 16px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all var(--sbswp-speed-normal) var(--sbswp-ease-quantum);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 20px rgba(0, 102, 255, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.sbswp-neural-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transition: all var(--sbswp-speed-slow) var(--sbswp-ease-ultra);
+}
+
+.sbswp-neural-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 40px rgba(0, 102, 255, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+    0 0 50px rgba(0, 102, 255, 0.4);
+}
+
+.sbswp-neural-button:hover::before {
+  left: 100%;
+}
+
+.sbswp-neural-button:active {
+  transform: translateY(-2px);
+  transition: all var(--sbswp-speed-instant) var(--sbswp-ease-neural);
+}
+
+/* ==================================================
+   ADVANCED MICRO-INTERACTIONS
+   ================================================== */
+
+@keyframes sbswp-quantum-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(-5px) rotate(0deg); }
+  75% { transform: translateY(-15px) rotate(-1deg); }
+}
+
+@keyframes sbswp-neural-pulse {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(1.05);
+    filter: hue-rotate(90deg);
+  }
+}
+
+@keyframes sbswp-quantum-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes sbswp-holographic-text {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    background-position: 100% 50%;
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    background-position: 50% 100%;
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    background-position: 0% 0%;
+    filter: hue-rotate(270deg);
+  }
+}
+
+/* NEURAL ANIMATION CLASSES */
+.sbswp-animate-quantum-float {
+  animation: sbswp-quantum-float 6s ease-in-out infinite;
+}
+
+.sbswp-animate-neural-pulse {
+  animation: sbswp-neural-pulse 4s ease-in-out infinite;
+}
+
+.sbswp-animate-gradient-shift {
+  background-size: 400% 400%;
+  animation: sbswp-quantum-gradient-shift 8s ease infinite;
+}
+
+/* HOLOGRAPHIC TEXT EFFECTS */
+.sbswp-holographic-text {
+  background: linear-gradient(-45deg, 
+    var(--sbswp-primary-quantum), 
+    var(--sbswp-secondary-emerald), 
+    var(--sbswp-accent-gold), 
+    var(--sbswp-accent-purple));
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: sbswp-holographic-text 6s ease infinite;
+}
+
+/* ==================================================
+   AGENT MANAGEMENT UI COMPONENTS
+   ================================================== */
+
+.sbswp-agent-card {
+  background: var(--sbswp-neural-gradient-glass);
+  backdrop-filter: var(--sbswp-quantum-backdrop);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 24px;
+  transition: all var(--sbswp-speed-normal) var(--sbswp-ease-quantum);
+  position: relative;
+  overflow: hidden;
+}
+
+.sbswp-agent-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent,
+    rgba(0, 102, 255, 0.1),
+    transparent,
+    rgba(0, 208, 132, 0.1),
+    transparent
+  );
+  animation: rotate 10s linear infinite;
+  opacity: 0;
+  transition: opacity var(--sbswp-speed-normal);
+}
+
+.sbswp-agent-card:hover::before {
+  opacity: 1;
+}
+
+.sbswp-agent-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: var(--sbswp-neural-gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sbswp-agent-avatar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transform: translateX(-100%);
+  transition: transform var(--sbswp-speed-slow);
+}
+
+.sbswp-agent-card:hover .sbswp-agent-avatar::after {
+  transform: translateX(100%);
+}
+
+.sbswp-performance-meter {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+.sbswp-performance-fill {
+  height: 100%;
+  background: var(--sbswp-neural-gradient-primary);
+  border-radius: 4px;
+  transition: width var(--sbswp-speed-ultra) var(--sbswp-ease-quantum);
+  position: relative;
+}
+
+.sbswp-performance-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ==================================================
+   REAL-TIME DASHBOARD ELEMENTS
+   ================================================== */
+
+.sbswp-live-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(0, 208, 132, 0.1);
+  border: 1px solid rgba(0, 208, 132, 0.2);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sbswp-secondary-emerald);
+}
+
+.sbswp-live-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--sbswp-secondary-emerald);
+  border-radius: 50%;
+  animation: sbswp-neural-pulse 2s ease-in-out infinite;
+}
+
+.sbswp-metric-card {
+  background: var(--sbswp-neural-gradient-glass);
+  backdrop-filter: var(--sbswp-quantum-backdrop);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: all var(--sbswp-speed-normal) var(--sbswp-ease-quantum);
+}
+
+.sbswp-metric-value {
+  font-size: 36px;
+  font-weight: 800;
+  font-family: var(--sbswp-font-display);
+  background: var(--sbswp-neural-gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.sbswp-metric-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.sbswp-metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sbswp-quantum-glow);
+}
+
+/* ==================================================
+   RESPONSIVE NEURAL GRID SYSTEM
+   ================================================== */
+
+.sbswp-neural-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .sbswp-neural-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .sbswp-quantum-card {
+    border-radius: 16px;
+    padding: 16px;
+  }
+  
+  .sbswp-neural-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+/* ==================================================
+   ULTRA-PREMIUM SCROLL EFFECTS
+   ================================================== */
+
+.sbswp-scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all var(--sbswp-speed-slow) var(--sbswp-ease-quantum);
+}
+
+.sbswp-scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sbswp-neural-gradient-primary);
+  border-radius: 6px;
+  transition: all var(--sbswp-speed-normal);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sbswp-primary-quantum-light);
+  box-shadow: var(--sbswp-quantum-glow);
+}
+
+/* ==================================================
+   COMPETITION ANNIHILATION UTILITIES
+   ================================================== */
+
+.sbswp-wow-factor {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.sbswp-depth-1 { transform: translateZ(10px); }
+.sbswp-depth-2 { transform: translateZ(20px); }
+.sbswp-depth-3 { transform: translateZ(30px); }
+
+.sbswp-glow-primary { box-shadow: var(--sbswp-quantum-glow); }
+.sbswp-glow-emerald { box-shadow: 0 0 50px rgba(0, 208, 132, 0.4); }
+.sbswp-glow-gold { box-shadow: 0 0 50px rgba(255, 149, 0, 0.4); }
+
+.sbswp-text-quantum {
+  background: var(--sbswp-neural-gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* NEURAL LOADING STATES */
+.sbswp-neural-loading {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.1) 25%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0.1) 75%);
+  background-size: 400% 100%;
+  animation: sbswp-quantum-gradient-shift 1.5s infinite;
+  border-radius: 8px;
+}
+
+/* ULTIMATE PERFORMANCE */
+.sbswp-gpu-accelerated {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
