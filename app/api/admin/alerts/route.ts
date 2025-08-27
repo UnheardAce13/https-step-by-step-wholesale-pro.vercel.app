@@ -1,9 +1,6 @@
 import { NextResponse } from "next/server"
 import { createAdminClient } from "@/lib/supabase"
-import { Resend } from "resend"
 
-// Only initialize Resend if API key is available
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 const FROM_EMAIL = process.env.FROM_EMAIL || "onboarding@resend.dev"
 
 export async function GET(req: Request) {
@@ -57,20 +54,10 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: "Error saving alert", error: dbError.message }, { status: 500 })
     }
 
-    // Send email notification if recipient_email is provided and Resend API key is set
-    if (recipient_email && resend && process.env.FROM_EMAIL) {
-      try {
-        await resend.emails.send({
-          from: process.env.FROM_EMAIL,
-          to: recipient_email,
-          subject: `System Alert: ${severity.toUpperCase()}`,
-          html: `<p><strong>Severity:</strong> ${severity}</p><p><strong>Message:</strong> ${message}</p><p>This is an automated alert from your Wholesale Pro SaaS platform.</p>`,
-        })
-        console.log(`Email alert sent to ${recipient_email}`)
-      } catch (emailError: any) {
-        console.error("Error sending email alert:", emailError)
-        // Do not fail the API call if email sending fails, just log it
-      }
+    // Email functionality temporarily disabled - focusing on core platform deployment
+    // TODO: Re-enable email alerts after successful deployment
+    if (recipient_email) {
+      console.log(`Email alert would be sent to ${recipient_email} (disabled for deployment)`);
     }
 
     return NextResponse.json({ message: "Alert created and processed successfully", alert: newAlert }, { status: 201 })
