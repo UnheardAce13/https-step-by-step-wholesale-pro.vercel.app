@@ -1,67 +1,29 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/components/ui/toaster"
-import { AuthProvider } from "@/lib/auth-context"
-import { ConditionalLayout } from "@/components/conditional-layout"
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "S.B.S.W.P 2.0 - Step-By-Step Wholesale Pro",
-  description: "The ultimate real estate investment platform with AI-powered deal analysis, agent management, and comprehensive CRM.",
-  keywords: "real estate, wholesale, investment, CRM, property analysis, AI, deal flow",
-  authors: [{ name: "S.B.S.W.P Team" }],
-  creator: "S.B.S.W.P",
-  publisher: "S.B.S.W.P",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://sbswp.com'),
-  openGraph: {
-    title: "S.B.S.W.P 2.0 - Ultimate Real Estate Platform",
-    description: "Advanced real estate investment platform that annihilates all competition",
-    type: "website",
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "S.B.S.W.P 2.0 - Ultimate Real Estate Platform",
-    description: "Advanced real estate investment platform that annihilates all competition",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  title: 'S.B.S.W.P 2.0 - Ultimate Real Estate Investment Platform',
+  description: 'AI-Powered Real Estate Investment Platform - Total Market Domination',
+  keywords: ['real estate', 'investment', 'AI', 'contracts', 'analytics', 'wholesale'],
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <AuthProvider>
-            <ConditionalLayout>
-              {children}
-            </ConditionalLayout>
-          </AuthProvider>
-          <Toaster />
-        </ThemeProvider>
+        <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+          <main className="relative z-10">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   )
