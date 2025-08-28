@@ -92,31 +92,32 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             {/* Premium Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-blue-600/20 to-emerald-600/20 border border-blue-400/30 mb-6 sm:mb-8 animate-premium-bounce-in hover-glow-blue interactive-scale">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-blue-600/20 to-emerald-600/20 border border-blue-400/30 mb-6 sm:mb-8 animate-premium-bounce-in hover-glow-blue interactive-scale">
               <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400 animate-premium-glow" />
-              <span className="text-xs sm:text-sm font-medium">AI-Powered Enterprise Platform</span>
+              <span className="text-xs sm:text-sm font-medium">S.B.S.W.P 2.0 - TOTAL MARKET DOMINATION</span>
               <Badge variant="secondary" className="bg-emerald-500/20 text-emerald-400 border-emerald-400/30 animate-premium-pulse text-xs">
-                Live
+                AI POWERED
               </Badge>
             </div>
 
             {/* Hero Title */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight mb-6 sm:mb-8 animate-premium-slide-up will-change-transform leading-tight">
               <span className="bg-gradient-to-r from-white via-blue-100 to-emerald-100 bg-clip-text text-transparent block">
-                Transform Your
+                S.B.S.W.P 2.0
               </span>
               <br className="hidden sm:block" />
               <span className="text-gradient-animate block" style={{animationDelay: '0.3s'}}>
-                Real Estate Empire
+                AI-Powered Real Estate Empire
               </span>
             </h1>
 
             {/* Hero Subtitle */}
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 sm:mb-10 lg:mb-12 max-w-4xl mx-auto leading-relaxed animate-premium-slide-up px-4 sm:px-0" style={{animationDelay: '0.6s'}}>
-              The world's most advanced SaaS platform connecting wholesalers and investors with 
-              <span className="text-blue-400 font-semibold hover:text-glow"> cutting-edge AI automation</span>, 
-              <span className="text-emerald-400 font-semibold hover:text-glow"> smart contracts</span>, and 
-              <span className="text-purple-400 font-semibold hover:text-glow"> real-time deal flow</span>.
+              The ultimate real estate investment platform with 
+              <span className="text-blue-400 font-semibold hover:text-glow"> AI contract generation</span>, 
+              <span className="text-emerald-400 font-semibold hover:text-glow"> DocuSign integration</span>, and 
+              <span className="text-purple-400 font-semibold hover:text-glow"> predictive analytics</span> that 
+              <span className="text-yellow-400 font-bold"> ANNIHILATES </span> all competition.
             </p>
 
             {/* CTA Section */}
